@@ -1,4 +1,4 @@
-from classes.Product import Product
+from Product import Product
 
 
 class Cola(Product):

@@ -1,0 +1,23 @@
+import sys
+
+import unittest
+from Project.classes.Candy import Candy
+from Project.classes.Chips import Chips
+from Project.classes.Cola import Cola
+from Project.classes.ProductInventory import ProductInventory
+
+
+
+class TestProductInventory(unittest.TestCase):
+    
+    def test_product_inventory_accepts_products(self):
+        product_inventory = ProductInventory()
+        products = [Chips(), Candy(), Cola()]
+        product_inventory.stock_product(products)
+        self.assertEqual(product_inventory.chip_inventory, 1)
+        self.assertEqual(product_inventory.candy_inventory, 1)
+        self.assertEqual(product_inventory.cola_inventory, 1)
+        
+if __name__ == '__main__':
+    unittest.main()
+    

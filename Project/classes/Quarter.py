@@ -1,4 +1,4 @@
-from classes.Coin import Coin
+from Coin import Coin
 
 
 class Quarter(Coin):
